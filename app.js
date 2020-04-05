@@ -11,6 +11,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res, next) => {
+  console.log("We are starting the get index request");
   //sms.callSmsApi();
   //res.json(["successs"]);
   res.sendFile(path.join(__dirname + '/index.html'));
