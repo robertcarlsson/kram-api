@@ -1,8 +1,8 @@
 const https = require('https')
 const querystring = require('querystring')
 
-const username = "u14558844917d657f6c3903e6f5980ba2"
-const password = "DA2EE7B1BC58202592B55909E8BCA2B6"
+const username = process.env.SMS_USERNAME
+const password = process.env.SMS_PASSWORD
 
 const postFields = {
     from: "+46766864403",
