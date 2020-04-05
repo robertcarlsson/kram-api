@@ -3,8 +3,10 @@ var sms = require("./sms.js");
 
 var app = express();
 
-app.listen(8080, () => {
-  console.log("Server running on port 3000");
+var port = process.env.PORT | 8080;
+
+app.listen(port, () => {
+  console.log("Server running on port" + port.toString());
 });
 
 app.get("/", (req, res, next) => {
