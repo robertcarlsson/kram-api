@@ -7,6 +7,7 @@ app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
 
-app.get("/", () => {
+app.get("/", (req, res, next) => {
   sms.callSmsApi();
+  res.json(["successs"]);
 });
