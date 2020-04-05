@@ -1,5 +1,6 @@
 var express = require("express");
 var sms = require("./sms.js");
+var path = require('path');
 
 var app = express();
 
@@ -10,6 +11,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res, next) => {
-  sms.callSmsApi();
-  res.json(["successs"]);
+  //sms.callSmsApi();
+  //res.json(["successs"]);
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
