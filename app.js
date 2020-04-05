@@ -8,6 +8,6 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res, next) => {
-  sms.callSmsApi();
+  //sms.callSmsApi();
   res.json(["successs"]);
 });
